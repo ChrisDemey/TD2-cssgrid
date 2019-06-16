@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <title>The Division 2 - Équipements</title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/img/Tctd2_logoblanc.png" />
+    </header>
+    <nav>
+        <div class="marques" onclick="brandClick()">
+            <p>MARQUES</p>
+        </div>
+        <div class="exo" onclick="exoClick()">
+            <p>EXOTIQUES</p>
+        </div>
+        <div class="gear" onclick="gearClick()">
+            <p>SETS</p>
+        </div>
+    </nav>
+
+    <div class="brandlist">
+        <main>
+            <table>
+                <tr>
+                    <th colspan="2">MARQUES D'ÉQUIPPEMENTS</th>
+                </tr>
+                <tr>
+                    <td class="tacticalbtn">5.11 Tactical</td>
+                    <td>Murakami Industries</td>
+                </tr>
+                <tr>
+                    <td>Airaldi Holdings</td>
+                    <td>Overlord Armaments</td>
+                </tr>
+                <tr>
+                    <td>Alps Summit Armament</td>
+                    <td>Petrov Defense Group</td>
+                </tr>
+                <tr>
+                    <td>Badger Tuff</td>
+                    <td>Providence Defense</td>
+                </tr>
+                <tr>
+                    <td>Česká Výroba s.r.o.</td>
+                    <td>Richter & Kaiser GmbH</td>
+                </tr>
+                <tr>
+                    <td>China Light Industries Corporation</td>
+                    <td>Sokolov Concern</td>
+                </tr>
+                <tr>
+                    <td>Douglas & Harding</td>
+                    <td>Wyvern Wear</td>
+                </tr>
+                <tr>
+                    <td>Fenris Group AB</td>
+                    <td>Yaahl Gear</td>
+                </tr>
+                <tr>
+                    <td>Gila Guard</td>
+                </tr>
+                <tr>
+                    <td>Golan Gear</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+    <div class="exolist">
+        <main>
+            <table>
+                <tr>
+                    <th colspan="2">ARMES EXOTIQUES</th>
+                </tr>
+                <tr>
+                    <th>Armes</th>
+                    <th>Équipements</th>
+                </tr>
+                <tr>
+                    <td>Bonne Nuit
+                        <!--Fusil à pompe-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Flux Continu
+                        <!--Pistolet-Mitrailleur-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Impitoyable
+                        <!--Fusil d'assaut-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inflexible
+                        <!--Fusil d'assaut-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Liberté
+                        <!--Pistolet-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lullaby
+                        <!--Fusil à pompe-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nemesis
+                        <!--Fusil de précision-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pestilence
+                        <!--Mitrailleuse légère-->
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </div>
+    <div class="gearlist">
+        <main>
+            <table>
+                <tr>
+                    <th colspan="2">SETS D'ÉQUIPEMENTS</th>
+                </tr>
+                <tr>
+                    <td>Aces & Eights</td>
+                </tr>
+                <tr>
+                    <td>Hard Wired</td>
+                </tr>
+                <tr>
+                    <td>Negociator's Dilemna</td>
+                </tr>
+                <tr>
+                    <td>Ongoing Directvive</td>
+                </tr>
+                <tr>
+                    <td>Tip of the Spear</td>
+                </tr>
+                <tr>
+                    <td>True Patriot</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+
+    <!--Marques d'équipements -->
+    <div class="tacticaltab">
+        <!--511 tactical-->
+        <table>
+            <thead>
+                <tr>
+                    <th>5.11 Tactical</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+5%</span> Protection contre Élites</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Soins reçus bonus</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+10%</span> Maniement d'arme</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Sac à dos<br>Gants</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="airalditab">
+        <!--airaldi holdings-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Airaldi Holdings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Précision</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Dégâts tirs à la tête</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+10%</span> Dégâts Fusils de précision</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Sac à dos<br>Gants<br>Holster</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="summittab">
+        <!--airaldi holdings-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Alps Summit Armament</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Réduction temps de recharge</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+5%</span> Puissance de la compétence</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Puissance de compétence pour la Ruche</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Sac à dos<br>Gants</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="badgertab">
+        <!--badger tuff-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Badger Tuff</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+7%</span> Dégâts contre Élites</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+15%</span> Protection sur élimination</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Puissance de compétence pour Lanceur Chimique</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Sac à dos<br>masque<br>Gants</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="ceskatab">
+        <!--ceska vyroba sro-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Česká Výroba s.r.o.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Santé sur élimination</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Dégâts fusil à pompe</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Santé</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>?</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="chinatab">
+        <!--china light industries corporation-->
+        <table>
+            <thead>
+                <tr>
+                    <th>China Light Industries Corporation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Dégâts d'explosion</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Dégâts fusil à pompe</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+10%</span> Réduction temps de recharge</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Masque<br>Gants<br>Genouillères</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="douglastab">
+        <!--douglas & harding-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Douglas & Harding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+5%</span> Précision</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Dégâts de coups critiques</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+7%</span> Chances de coups critiques</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Masque<br>Genouillères<br>Holster</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="fenristab">
+        <!--fenris group AB-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Fenris Group AB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Dégâts fusils d'assaut</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Protection contre Élites</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+20%</span> Santé sur élimination</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Genouillères<br>Holster</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="gilatab">
+        <!--gila guard-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Gila Guard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+5%</span> Total d'armure</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+20%</span> Protection altération d'état</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Puissance de compétence pour Impulsion</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Tous</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="golantab">
+        <!--golan gear-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Golan Gear</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Protection altération d'état</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Protection contre Élites</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+8%</span> Total armure</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>?</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="murakamitab">
+        <!--murakami industries-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Murakami Industries</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+8%</span> Santé</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+10%</span> Protection altération d'état</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Puissance de compétence Luciole</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Tous</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="overlordtab">
+        <!--overlord armaments-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Overlord Armaments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Dégâts fusils</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+7,5%</span> Total armure</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+7%</span> Dégâts contre Élites</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Gants<br>Genouillères</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="petrovtab">
+        <!--petrov defense group-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Petrov Defense Group</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Dégâts mitrailleuses légères</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+7,5%</span> Puissance de compétence pour Tourelle</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+7%</span> Réduction temps de recharge</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Sac à dos<br>Holster</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="providencetab">
+        <!--providence defense-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Providence Defense</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Puissance de la compétence</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+8%</span> Santé</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+5%</span> Dégâts d'arme</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Tous</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="richtertab">
+        <!--richter & kaiser gmbh-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Richter & Kaiser GmbH</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Protectio altération d'état</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+20%</span> Dégâts de pitolet</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Puissance de compétence pour Bouclier</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Sac à dos<br>mmasque<br>Holster</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="sokolovtab">
+        <!--sokolov concern-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Sokolov Concern</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Dégâts pistolet-mitrailleurs</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+8%</span> Dégâts coups critiques</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+15%</span> Puissance de compétence pour Mine téléguidée</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Masque<br>Genouillères</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="wyverntab">
+        <!--wyvern wear-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Wyvern Wear</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+7%</span> Dégâts coups critiques</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+15%</span> Puissance de compétence pour Drone</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+10%</span> Chances de coups critiques</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Sac à dos<br>Masque<br>Genouillères<br>Holster</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="yaahltab">
+        <!--yaahl gear-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Yaahl Gear</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bonus 1: <span>+10%</span> Maniement d'arme</td>
+                </tr>
+                <tr>
+                    <td>Bonus 2: <span>+8%</span> Puissance altération d'état</td>
+                </tr>
+                <tr>
+                    <td>Bonus 3: <span>+5%</span> Dégâts d'arme</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><span>Équipements disponibles:</span><br>Torse<br>Sac à dos<br>Masque<br>Gants</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Exotiques -->
+    <div class="bonnenuit">
+        <!--bonne nuit-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Bonne Nuit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Bonne Nuit</h3>
+                        <p>Frapper un ennemi au corps à corps après avoir équipé cette arme confère 35% de protection
+                            bonus pendant 5 secondes et active le debuff Sandman pendant 5 secondes.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Sandman</h3>
+                        <p>Cet affaiblissement empêche l’ennemi d’utiliser des kits de protection et de recevoir des
+                            soins de toute source.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Evasive</h3>
+                        <p>Lorsque l’arme est équipée, les esquives rechargent 1% du chargeur de l’arme utilisée.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Mods d'arme:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lunette: <span>+15%</span> Précision<br>
+                        Chargeur: <span>+15%</span> Vitesse de rechargement<br>
+                        Sous le canon: <span>+25%</span> Portée optimale
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="fluxcontinu">
+        <!--flux continu-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Flux Continu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Conversation Ininterrompue</h3>
+                        <p>Chaque tir touchant un ennemi améliore de 1% la cadence de tir jusqu’à un maximum de 60%.
+                            Disparais lors du rechargerment de l'arme.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Chargeur Évolutif</h3>
+                        <p>Les éliminations réalisées avec cette arme remplissent 20% de son chargeur et confèrent un
+                            buff pendant 10 secondes.
+                            Tant que le buff est actif, chaque tir atteignant un ennemi augmente la capacité du chargeur
+                            de 1, jusqu’à un maximum de 60.
+                            Éliminer une cible consomme le buff et remplit entièrement le chargeur amélioré.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Pipelette</h3>
+                        <p>En holster, recharger votre arme dans les 5 secondes suivant une élimination amélioré de 20%
+                            la cadence de tir pendant 10 secondes.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Mods d'arme:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lunette: <span>+5%</span> chances de coups critiques<br>
+                        Chargeur: <span>+10%</span> vitesse de rechargement<br>
+                        Sous le canon: <span>+25%</span> maniement d'arme<br>
+                        Canon: <span>+10%</span> chances de coups critiques
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
