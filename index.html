@@ -14,13 +14,13 @@
         <img src="assets/img/Tctd2_logoblanc.png" />
     </header>
     <nav>
-        <div class="marques" onclick="brandClick()">
+        <div class="marques" onclick="tabClick('.brandlist')">
             <p>MARQUES</p>
         </div>
-        <div class="exo" onclick="exoClick()">
+        <div class="exo" onclick="tabClick('.exolist')">
             <p>EXOTIQUES</p>
         </div>
-        <div class="gear" onclick="gearClick()">
+        <div class="gear" onclick="tabClick('.gearlist')">
             <p>SETS</p>
         </div>
     </nav>
@@ -83,9 +83,10 @@
                     <th>Équipements</th>
                 </tr>
                 <tr>
-                    <td>Bonne Nuit
+                    <td>Bonne Nuit / Berceuse
                         <!--Fusil à pompe-->
                     </td>
+                    <td>Étui du Dodge City Gunslinger</td>
                 </tr>
                 <tr>
                     <td>Flux Continu
@@ -105,11 +106,6 @@
                 <tr>
                     <td>Liberté
                         <!--Pistolet-->
-                    </td>
-                </tr>
-                <tr>
-                    <td>Lullaby
-                        <!--Fusil à pompe-->
                     </td>
                 </tr>
                 <tr>
@@ -625,34 +621,34 @@
 
     <!-- Exotiques -->
     <div class="bonnenuit">
-        <!--bonne nuit-->
+        <!--bonne nuit / berceuse-->
         <table>
             <thead>
                 <tr>
-                    <th>Bonne Nuit</th>
+                    <th>Bonne Nuit / Berceuse</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
                         <h3>Bonne Nuit</h3>
-                        <p>Frapper un ennemi au corps à corps après avoir équipé cette arme confère 35% de protection
-                            bonus pendant 5 secondes et active le debuff Sandman pendant 5 secondes.
+                        <p>Frapper un ennemi au corps à corps après avoir équipé cette arme confère <strong>35% de protection
+                            bonus</strong> pendant <strong>5 secondes</strong> et active le debuff <strong>Marchand de Sable</strong> pendant <strong>5 secondes</strong>.
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <h3>Sandman</h3>
-                        <p>Cet affaiblissement empêche l’ennemi d’utiliser des kits de protection et de recevoir des
-                            soins de toute source.
+                        <h3>Marchand de Sable</h3>
+                        <p>Cet affaiblissement empêche l’ennemi d’utiliser des <strong>kits de protection</strong> et de recevoir des
+                            <strong>soins</strong> de toute source.
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <h3>Evasive</h3>
-                        <p>Lorsque l’arme est équipée, les esquives rechargent 1% du chargeur de l’arme utilisée.
+                        <h3>Esquive Tactique</h3>
+                        <p>Lorsque l’arme est équipée, les <strong>esquives rechargent 1% du chargeur</strong> de l’arme utilisée.
                         </p>
                     </td>
                 </tr>
@@ -685,7 +681,7 @@
                 <tr>
                     <td>
                         <h3>Conversation Ininterrompue</h3>
-                        <p>Chaque tir touchant un ennemi améliore de 1% la cadence de tir jusqu’à un maximum de 60%.
+                        <p>Chaque tir touchant un ennemi améliore de <strong>1% la cadence de tir</strong> jusqu’à un maximum de <strong>60%</strong>.
                             Disparais lors du rechargerment de l'arme.
                         </p>
                     </td>
@@ -693,10 +689,10 @@
                 <tr>
                     <td>
                         <h3>Chargeur Évolutif</h3>
-                        <p>Les éliminations réalisées avec cette arme remplissent 20% de son chargeur et confèrent un
-                            buff pendant 10 secondes.
+                        <p>Les éliminations réalisées avec cette arme remplissent <strong>20%</strong> de son chargeur et confèrent un
+                            buff pendant <strong>10 secondes</strong>.
                             Tant que le buff est actif, chaque tir atteignant un ennemi augmente la capacité du chargeur
-                            de 1, jusqu’à un maximum de 60.
+                            de <strong>1</strong>, jusqu’à un maximum de <strong>60</strong>.
                             Éliminer une cible consomme le buff et remplit entièrement le chargeur amélioré.
                         </p>
                     </td>
@@ -704,8 +700,8 @@
                 <tr>
                     <td>
                         <h3>Pipelette</h3>
-                        <p>En holster, recharger votre arme dans les 5 secondes suivant une élimination amélioré de 20%
-                            la cadence de tir pendant 10 secondes.
+                        <p>En holster, recharger votre arme dans les <strong>5 secondes</strong> suivant une élimination amélioré de <strong>20%
+                            la cadence de tir</strong> pendant <strong>10 secondes</strong>.
                         </p>
                     </td>
                 </tr>
@@ -725,6 +721,499 @@
                     </td>
                 </tr>
             </tfoot>
+        </table>
+    </div>
+    <div class="impitoyable">
+        <!--flux continu-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Impitoyable</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Détente Binaire</h3>
+                        <p>Cette arme est équipée d'une <strong>détente binaire qui tire</strong> lorsque l'utilisateur <strong>relâche la détente</strong> après avoir appuyé dessus.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Guérilla</h3>
+                        <p>En appuyant sur la détente, tire des munitions d'amorce qui adhèrent à la cible. Relâcher la détente tire des munitions qui font exploser les munitions d'amorce.<br>
+                            Chaque munition d'amorce activée augmente les dégâts de <strong>+75%</strong> par munitions.<br>
+                            Un seul ennemi peut avoir des amorces avec un maximum de <strong>5 amorces</strong>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Brutalité</h3>
+                        <p>En holster, chaque tir touchant un ennemi a <strong>5%</strong> de probabilité d'infliger <strong>+20% de dégâts</strong> sous forme de dégâts explosifs.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Mods d'arme:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lunette: <span>+10%</span> précision<br>
+                        Chargeur: <span>+15%</span> vitesse de rechargement<br>
+                        Sous le canon: <span>+20%</span> maniement d'arme<br>
+                        Canon: <span>+20%</span> stabilité
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="liberte">
+        <!--flux continu-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Liberté</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Liberté</h3>
+                        <p>Inflige <strong>+100% aux dispositifs électriques ennemis</strong>.
+                            Lorsque vous visez avec cette arme, les <strong>points faibles</strong> et les <strong>dispositifs électroniques ennemis</strong> apparaissent en <strong>surbrillance</strong>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Justice Aveugle</h3>
+                        <p>Après avoir détruit un point faible d'un ennemis ou dispositif électronique, le prochain tir de cette arme augmentera ses dégâts de <strong>500%</strong>.
+                            Si ce tir élimine un ennemis, votre chargeur est rempli et augmente les dégâts de cette arme de <strong>100%</strong> pour tout le chargeur.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Indépendance</h3>
+                        <p>En holster, détruire des points faibles remplit <strong>20%</strong> du chargeur de l'arme équipée.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Mods d'arme:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lunette: <span>+10%</span> chances de coups critiques<br>
+                        Chargeur: <span>+15%</span> dégâts aux Élites<br>
+                        Sous le canon: <span>+15%</span> vitesse de tir<br>
+                        Canon: <span>+15%</span> stabilité
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="nemesis">
+        <!--flux continu-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nemesis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Contre-snipers</h3>
+                        <p>Les dégâts infligent entre <strong>0 et 100% de dégâts</strong> en fonction du temps de pression avant de relâcher la détente.
+                            Le temsp nécessaire pour atteindre les dégâts maximum diminue à chaque fois qu'un tir touche un ennemi sans le tuer.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Nemesis</h3>
+                        <p>Viser un ennemi le désigne comme votre némésis pendant <strong>15 secondes</strong>, ce qui vous permet de le voir à travers les murs.
+                            Vos tirs contre votre némésis gagnent un bonus de <strong>+5% de dégâts</strong> chaque secondes tant qu'elle est marquée, jusqu'à un maximum de <strong>50%</strong>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Préparation</h3>
+                        <p>En holster, confère un bonus de dégâts de headshot de <strong>10%</strong> quand vous zoomez avec l'arme utilisée.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Mods d'arme:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lunette: <span>+35%</span> dégâts de headshot<br>
+                        Chargeur: <span>+10%</span> vitesse de rechargement<br>
+                        Sous le canon: <span>+15%</span> dégâts aux Élites<br>
+                        Canon: <span>+15%</span> chances de coups critiques
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="pestilence">
+        <!--flux continu-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Pestilence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Fléau des Parias</h3>
+                        <p>Après avoir touché le même ennemi <strong>20 fois</strong>, cet ennemi est contaminé avec <strong>Fléau des Parias</strong>.
+                            Quand un ennemi avec <strong>Fléau des Parias</strong> est tué, il génère un nuage toxique pendant <strong>10 secondes</strong>, inflige <strong>200% des dégâts d'arme</strong> par secondes et inflige <strong>Pestilence</strong> à quiconque se trouve dans sa zone d'effet.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Pestilence</h3>
+                        <p>Ce débuff diminue les soins reçu de <strong>50%</strong> pendant <strong>10 secondes</strong>.<br>
+                            Quand un ennemi affecté par <strong>Pestilence</strong> est mis à terre, <strong>il meurt instantanément</strong>>.
+                            Le débuff est annulé si la protection de l'ennemi est restaurée à son maximum.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Résilience des Parias</h3>
+                        <p>En holster, confère une <strong>protection bonus de 20%</strong> pendant <strong>5 secondes</strong> si vous subissez <strong>aveuglement</strong>, <strong>saignement</strong> ou <strong>brûlure</strong>.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Mods d'arme:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Chargeur: <span>+30%</span> munitions<br>
+                        Sous le canon: <span>+20%</span> maniement d'arme<br>
+                        Canon: <span>+25%</span> stabilité
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Gearsets -->
+    <div class="hardwired">
+        <!--Hard Wired-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=3>Hard Wired</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>2 pièce</h3>
+                        <p><strong>+5%</strong> Protection contre Élites
+                        </p>
+                    </td>
+                    <td>
+                        <h3>3 pièce</h3>
+                        <p><strong>+20%</strong> Durée électrocution
+                        </p>
+                    </td>
+                    <td>
+                        <h3>4 pièces</h3>
+                        <p><strong>+20%</strong> Puissance de compétences
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>5 pièces: <strong>Tamper Proof</strong></h3>
+                        <p id="twop">
+                            Électrifie vos compétences déployées (ruche, tourelles, capteur impulsion) pour <strong>électrocuter les ennemis (désorienter en PVP)</strong> à proximité.<br>
+                            Peut se produire toutes les 10 secondes.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>6 pièces: <strong>Feedback Loop</strong></h3>
+                        <p id="twop">
+                            Éliminer un ennemi avec une compétence remet à zéro le temps de rechargement de l'autre compétence.<br>
+                            Réparer la protection depuis zéro d'un agent allié remet à zéro le temps de rechargement de l'autre compétence.<br>
+                            Quand le rechargement d'une compétence est terminé (ou en pleine charge) vous gagnez un bonus aux dégâts et à la réparation pour toutes les compétences <strong>pendant 15 secondes</strong>.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="patriot">
+        <!--True Patriot-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=3>True Patriot</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>2 pièce</h3>
+                        <p><strong>+10%</strong> dégâts à l'armure
+                        </p>
+                    </td>
+                    <td>
+                        <h3>3 pièce</h3>
+                        <p><strong>+10%</strong> protection contre les Élites
+                        </p>
+                    </td>
+                    <td>
+                        <h3>4 pièces</h3>
+                        <p><strong>+10%</strong> armure totale
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>5 pièces: <strong>Rouge, Blanc et Bleu</strong></h3>
+                        <p id="twop">
+                            Lorsque vous tirez sur un ennemi, vous leur appliquez un débuff.
+                            Les débuff appliqués changent <strong>toutes les 2 secondes</strong> dans cet ordre: Rouge/Blanc/Bleu.
+                            <ul>
+                                <li><strong>Rouge</strong>: Diminue les dégâts infligés par les ennemis.</li>
+                                <li><strong>Blanc</strong>: Restaure de la protection aux alliés qui tirent sur cette cible.</li>
+                                <li><strong>Bleu</strong>: Accélère le temps de rechargement des alliés qui tirent sur cette cible.</li>
+                            </ul>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>6 pièces: <strong>Full Flag</strong></h3>
+                        <p id="twop">
+                            Tirer sur un ennemi qui a les <strong>3 débuffs</strong> infligera <strong>50% des dégâts</strong> aux autres cibles proches qui ont au moins un des débuffs.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ongoing">
+        <!--Ongoing Directive-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=3>Ongoing Directive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>2 pièce</h3>
+                        <p><strong>+20%</strong> maniement d'arme
+                        </p>
+                    </td>
+                    <td>
+                        <h3>3 pièce</h3>
+                        <p><strong>+25%</strong> dégâts de brûlure
+                        </p>
+                    </td>
+                    <td>
+                        <h3>4 pièces</h3>
+                        <p><strong>+25%</strong> dégâts de saignement
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>5 pièces: <strong>Emergency Requisition</strong></h3>
+                        <p id="twop">
+                            Les ressources de combat (<strong>kits de réparation</strong>, <strong>munitions</strong> et <strong>grenades</strong>) dans les <strong>40 mètres</strong> autour de vous sont automatiquement récupérés.<br>
+                            Se produit toutes les 30 secondes.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>6 pièces: <strong>The Right Tool</strong></h3>
+                        <p id="twop">
+                            Tuer un ennemi avec une arme donne des munitions spéciales (<strong>incendiaires</strong>, <strong>explosives</strong>, <strong>électriques</strong>) à l'une de vos autres armes.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="aces">
+        <!--Aces and Eights-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=3>Aces and Eights</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>2 pièce</h3>
+                        <p><strong>+20%</strong> maniement d'arme
+                        </p>
+                    </td>
+                    <td>
+                        <h3>3 pièce</h3>
+                        <p><strong>+20%</strong> précision de l'arme
+                        </p>
+                    </td>
+                    <td>
+                        <h3>4 pièces</h3>
+                        <p><strong>+10%</strong> dégâts de Fusil de précision
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>5 pièces: <strong>Dead Man's Hand</strong></h3>
+                        <p id="twop">
+                            Retourne une carte en tirant sur un ennemi avec votre fusil de précision, deux cartes si headshot.
+                            <ul>
+                                <li><strong>Full House</strong>: Recharge votre  arme et vous donne des munitions illimitées pendant 10 secondes.</li>
+                                <li><strong>4 of a Kind</strong>: Accorde un bonus d'armure de 30% pendant 10 secondes.</li>
+                                <li><strong>Aces & Eights</strong>: Accorde un bonus de 100% de dégâts pour vos 5 prochaines balles.</li>
+                            </ul>
+                            Requiert la spécialisation <strong>Tireur d'Élite</strong>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>6 pièces: <strong>Sheriff's Favor</strong></h3>
+                        <p id="twop">
+                            L'effet de <strong>Dead Man's Hand</strong> s'applique à tous les membres du groupe/Raid.<br>
+                            Requiert la spécialisation <strong>Tireur d'Élite</strong>.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="nego">
+        <!--Negotiator's Dilemma-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=3>Negotiator's Dilemma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>2 pièce</h3>
+                        <p><strong>+10.000</strong> armure sur élimination
+                        </p>
+                    </td>
+                    <td>
+                        <h3>3 pièce</h3>
+                        <p><strong>+30%</strong> de santé
+                        </p>
+                    </td>
+                    <td>
+                        <h3>4 pièces</h3>
+                        <p><strong>+30%</strong> résistance aux explosions
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>5 pièces: <strong>Blowback</strong></h3>
+                        <p id="twop">
+                            Lance une grenade sur la cible qui à détruit votre armure.<br>
+                            Peut se produire une fois <strong>toutes les 3 secondes</strong>.<br>
+                            Requiert la spécialisation <strong>Démolisseur</strong>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>6 pièces: <strong>Press Home the Advantage</strong></h3>
+                        <p id="twop">
+                            Les explosions causées par le joueur cumulent un <strong>bonus bombardier</strong>.<br>
+                            Chaque buff cumulé accorde aux membres de groupe/raid <strong>+10% de dégâts d'explosifs</strong>, et <strong>10% de bonus de protection</strong> pendant 10 secondes au joueur.<br>
+                            Requiert la spécialisation <strong>Démolisseur</strong>.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="spear">
+        <!--Tip of the Spear-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=3>Tip of the Spear</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>2 pièce</h3>
+                        <p><strong>+20%</strong> puissance de compétence Impulsion
+                        </p>
+                    </td>
+                    <td>
+                        <h3>3 pièce</h3>
+                        <p><strong>+20%</strong> réduction temps de recharge
+                        </p>
+                    </td>
+                    <td>
+                        <h3>4 pièces</h3>
+                        <p><strong>+20%</strong> protection dégâts d'Élites
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>5 pièces: <strong>Electromagnetic Trigger</strong></h3>
+                        <p id="twop">
+                            Les carreaux de l'arbalète sont équipés de <strong>détonateurs</strong>. Lors de l'impact, les carreaux déclenchent une <strong>impulsion d'un rayon de 9 mètres</strong>.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <h3>6 pièces: <strong>Aggressive Recon</strong></h3>
+                        <p id="twop">
+                            Lorsque vous tuez un ennemi, vous déclenchez une petite impulsion à partir de l'emplacement de son corps. Les membres de groupe/raid infligent <strong>20% de dégâts</strong> supplémentaires aux cibles pulsées.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <script src="assets/js/script.js"></script>

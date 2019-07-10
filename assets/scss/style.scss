@@ -1,12 +1,11 @@
 body {
     background: linear-gradient(rgba(255, 255, 255, 0.322)), url("../img/Mbk7Lv34i4r42qYYbmRa53.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
+    background-position: fixed;
+    background-size: cover;
     margin: 0;
     width: 100%;
-    height: 100vh;
-    /* vh fait prendre toute la hauteur de la vue de l'écran */
+    height: 100vh; // vh fait prendre toute la hauteur de la vue de l'écran
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-rows: 100px 1fr 35px;
@@ -16,25 +15,23 @@ body {
 
 header {
     background: linear-gradient(to bottom, rgb(255, 160, 18), rgba(255, 160, 18, 0));
-    /*background-color: #e9691e;*/
     grid-area: 1/1/2/3;
-    padding-top: 15px;
-    position: fixed;
+    padding-top: 10px;
     /*Empecher le header de bouger*/
     width: 100%;
     img {
-        height: 80px;
+        height: 65px;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-// Nav + 3 boutons
+// 3 boutons
 nav {
     display: grid;
     grid-area: 2/1/3/2;
-    padding:10px;
+    padding: 10px;
     margin-left: 20px;
     .marques,
     .exo,
@@ -47,8 +44,8 @@ nav {
     }
     .marques {
         background: linear-gradient(to right,
-            rgba(255, 166, 0, 0),
-            rgba(255, 166, 0, 0)), url("../img/the-d2-brandsjpeg.png");
+                rgba(255, 166, 0, 0),
+                rgba(255, 166, 0, 0)), url("../img/the-d2-brandsjpeg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -58,8 +55,8 @@ nav {
         &:hover {
             cursor: pointer;
             background: linear-gradient(to right,
-                rgba(255, 166, 0, 0.671),
-                rgba(255, 166, 0, 0)), url("../img/the-d2-brandsjpeg.png");
+                    rgba(255, 166, 0, 0.671),
+                    rgba(255, 166, 0, 0)), url("../img/the-d2-brandsjpeg.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -78,8 +75,8 @@ nav {
         &:hover {
             cursor: pointer;
             background: linear-gradient(to right,
-                rgba(255, 38, 0, 0.671),
-                rgba(255, 38, 0, 0)), url("../img/Merciless-Exotic.jpg");
+                    rgba(255, 38, 0, 0.671),
+                    rgba(255, 38, 0, 0)), url("../img/Merciless-Exotic.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -98,19 +95,22 @@ nav {
         &:hover {
             cursor: pointer;
             background: linear-gradient(to right,
-                rgba(0, 255, 136, 0.671),
-                rgba(0, 255, 136, 0)), url("../img/the-div-2-gears.png");
+                    rgba(0, 255, 136, 0.671),
+                    rgba(0, 255, 136, 0)), url("../img/the-div-2-gears.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
         }
     }
 }
+
+// tabs
 .brandlist {
     display: none;
     grid-area: 2/2/3/3;
-    padding:10px;
+    padding: 10px;
     margin-right: 20px;
+    overflow: auto;
     table {
         width: 600px;
         height: 100%;
@@ -128,7 +128,7 @@ nav {
             color: white;
             padding: 7px;
             padding-left: 15px;
-            &:hover{
+            &:hover {
                 color: rgb(255, 166, 0);
                 cursor: pointer;
                 background-color: rgb(92, 92, 92);
@@ -136,10 +136,11 @@ nav {
         }
     }
 }
+
 .exolist {
     display: none;
     grid-area: 2/2/3/3;
-    padding:10px;
+    padding: 10px;
     margin-right: 20px;
     table {
         width: 600px;
@@ -158,7 +159,7 @@ nav {
             color: white;
             padding: 7px;
             padding-left: 15px;
-            &:hover{
+            &:hover {
                 color: rgb(255, 38, 0);
                 cursor: pointer;
                 background-color: rgb(92, 92, 92);
@@ -166,10 +167,11 @@ nav {
         }
     }
 }
+
 .gearlist {
     display: none;
     grid-area: 2/2/3/3;
-    padding:10px;
+    padding: 10px;
     margin-right: 20px;
     table {
         width: 600px;
@@ -188,7 +190,7 @@ nav {
             color: white;
             padding: 7px;
             padding-left: 15px;
-            &:hover{
+            &:hover {
                 color: rgb(0, 255, 136);
                 cursor: pointer;
                 background-color: rgb(92, 92, 92);
@@ -198,13 +200,31 @@ nav {
 }
 
 // Marques
-.tacticaltab{
+.tacticaltab, 
+.airalditab, 
+.summittab, 
+.badgertab, 
+.ceskatab,
+.chinatab,
+.douglastab,
+.fenristab,
+.gilatab,
+.golantab,
+.murakamitab,
+.overlordtab,
+.petrovtab,
+.providencetab,
+.richtertab,
+.sokolovtab,
+.wyverntab,
+.yaahltab {
     display: none;
     grid-area: 2/2/3/3;
-    padding:10px;
+    padding: 10px;
     margin-right: 20px;
+    overflow: auto;
     table {
-        width: 400px;
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
         background-color: rgb(63, 63, 63);
@@ -212,739 +232,55 @@ nav {
         thead {
             color: rgb(255, 166, 0);
             font-size: 35px;
-            th{
+            th {
                 padding: 10px;
             }
         }
         tbody {
             color: white;
             background-color: rgb(255, 166, 0);
-            td{
+            td {
                 padding: 10px;
+                &:hover{
+                    background-color: rgb(255, 189, 67);
+                }
             }
-            span{
+            span {
                 color: rgb(1, 163, 1);
             }
         }
         tfoot {
             text-align: center;
             color: white;
-            td{
+            td {
                 padding: 10px;
             }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.airalditab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.summittab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 25px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.badgertab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.ceskatab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
+            span {
+                color: rgb(255, 166, 0);
                 font-weight: bold;
             }
         }
     }
 }
 .chinatab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 25px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.douglastab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 30px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.fenristab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.gilatab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.golantab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.murakamitab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.overlordtab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 30px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.petrovtab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 25px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.providencetab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 30px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.richtertab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 30px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.sokolovtab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.wyverntab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
-}
-.yaahltab{
-    display: none;
-    grid-area: 2/2/3/3;
-    padding:10px;
-    margin-right: 20px;
-    table {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(63, 63, 63);
-        padding: 5px;
-        thead {
-            color: rgb(255, 166, 0);
-            font-size: 35px;
-            th{
-                padding: 10px;
-            }
-        }
-        tbody {
-            color: white;
-            background-color: rgb(255, 166, 0);
-            td{
-                padding: 10px;
-            }
-            span{
-                color: rgb(1, 163, 1);
-            }
-        }
-        tfoot {
-            text-align: center;
-            color: white;
-            td{
-                padding: 10px;
-            }
-            span{
-                color:rgb(255, 166, 0);
-                font-weight: bold;
-            }
-        }
-    }
+    //display: block;
 }
 
 // Exotiques
-.bonnenuit{
+.bonnenuit, 
+.fluxcontinu, 
+.impitoyable, 
+.inflexible, 
+.liberte, 
+.nemesis,
+.pestilence {
     display: none;
     grid-area: 2/2/3/3;
-    padding:10px;
+    padding: 10px;
     margin-right: 20px;
+    overflow: auto;
     table {
-        width: 500px;
+        width: 6000px;
         margin-left: auto;
         margin-right: auto;
         background-color: rgb(63, 63, 63);
@@ -952,102 +288,231 @@ nav {
         thead {
             color: rgb(255, 38, 0);
             font-size: 35px;
-            th{
+            th {
                 padding-bottom: 10px;
             }
         }
         tbody {
             color: white;
             background-color: rgb(255, 38, 0);
-            td{
+            td {
                 padding: 10px;
+                &:hover{
+                    background-color: rgb(255, 89, 59);
+                }
             }
-            h3{
+            h3 {
+                color: rgb(63, 63, 63);
                 text-align: center;
                 margin: 0px;
                 padding-bottom: 5px;
             }
-            p{
-                margin:0px;
-                padding:0px;
+            p {
+                margin: 0px;
+                padding: 0px;
                 font-size: 0.9em;
                 text-align: justify;
             }
         }
         tfoot {
             color: white;
-            strong{
-                color:rgb(255, 38, 0);
+            strong {
+                color: rgb(255, 38, 0);
             }
-            h3{
+            h3 {
                 text-align: center;
                 margin: 5px;
             }
-            td{
+            td {
                 text-align: left;
                 padding-left: 20px;
                 padding-right: 20px;
             }
-            span{
-                color:rgb(1, 163, 1);
+            span {
+                color: rgb(1, 163, 1);
                 font-weight: bold;
             }
         }
     }
 }
-.fluxcontinu{
+.pestilence{
+    //display: block;
+}
+
+// Gearsets
+.hardwired, 
+.patriot, 
+.ongoing,
+.aces,
+.nego,
+.spear{
     display: none;
     grid-area: 2/2/3/3;
-    padding:10px;
+    padding: 10px;
     margin-right: 20px;
+    overflow: auto;
     table {
-        width: 700px;
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
         background-color: rgb(63, 63, 63);
         padding: 10px;
         thead {
-            color: rgb(255, 38, 0);
+            color: rgb(0, 255, 136);
             font-size: 35px;
-            th{
+            th {
                 padding-bottom: 10px;
             }
         }
         tbody {
-            color: white;
-            background-color: rgb(255, 38, 0);
-            td{
+            color: rgb(63, 63, 63);
+            background-color: rgb(0, 255, 136);
+            td {
                 padding: 10px;
+                &:hover{
+                    background-color: rgb(113, 255, 189);
+                }
             }
-            h3{
+            h3 {
+                color: rgb(63, 63, 63);
                 text-align: center;
                 margin: 0px;
                 padding-bottom: 5px;
+                strong{
+                    color: rgb(255, 166, 0);
+                    text-shadow:-1px -1px 0 rgb(63, 63, 63),  
+                                1px -1px 0 rgb(63, 63, 63),
+                                -1px 1px 0 rgb(63, 63, 63),
+                                1px 1px 0 rgb(63, 63, 63);
+                }
             }
-            p{
-                margin:0px;
-                padding:0px;
+            p {
+                margin: 0px;
+                padding: 0px;
                 font-size: 0.9em;
+            }
+            #twop{
                 text-align: justify;
             }
         }
-        tfoot {
-            color: white;
-            strong{
-                color:rgb(255, 38, 0);
+    }
+}
+.aces{
+    //display: block;
+}
+
+
+@media all and (max-width: 480px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: 90px 30px 1fr;
+        background: linear-gradient(rgba(255, 255, 255, 0.322)), url("../img/Mbk7Lv34i4r42qYYbmRa53.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+    }
+
+    header {
+        background: linear-gradient(to bottom, rgb(255, 160, 18), rgba(255, 160, 18, 0));
+        position: fixed;
+        img {
+            height: 55px;
+        }
+    }
+
+    nav {
+        display: grid;
+        padding: 0px;
+        padding-top: 0px;
+        height: 25px;
+        width: 320px;
+        justify-content: space-between;
+        .marques,
+        .exo,
+        .gear {
+            font-size: 0px;
+            width: 75px;
+            height: 20px;
+            border: 0px;
+            box-shadow: 0px 0px 3px black;
+        }
+        .marques {
+            grid-area: 1/1/2/2;
+            background: rgb(255, 166, 0);
+            &:hover {
+                background: rgb(255, 166, 0);
             }
-            h3{
-                text-align: center;
-                margin: 5px;
+        }
+        .exo {
+            grid-area: 1/2/2/3;
+            background: rgb(255, 38, 0);
+            &:hover {
+                background: rgb(255, 38, 0);
             }
-            td{
-                text-align: left;
-                padding-left: 20px;
-                padding-right: 20px;
+        }
+        .gear {
+            grid-area: 1/3/2/4;
+            background: rgb(0, 255, 136);
+            &:hover {
+                background: rgb(0, 255, 136);
             }
-            span{
-                color:rgb(1, 163, 1);
-                font-weight: bold;
+        }
+    }
+
+    .brandlist,
+    .exolist,
+    .gearlist {
+        grid-area: 3/1/4/2;
+        table {
+            width: 320px;
+            height: auto;
+            margin: 10px;
+            padding: 0px;
+            td {
+                font-size: 15px;
+            }
+        }
+    }
+
+    // marques tabs
+    .tacticaltab,
+    .airalditab,
+    .summittab,
+    .badgertab,
+    .ceskatab,
+    .chinatab,
+    .douglastab,
+    .fenristab,
+    .gilatab,
+    .golantab,
+    .murakamitab,
+    .overlordtab,
+    .petrovtab,
+    .providencetab,
+    .richtertab,
+    .sokolovtab,
+    .wyverntab,
+    .yaahltab {
+        grid-area: 3/1/4/2;
+        table {
+            width: 320px;
+            height: auto;
+            margin: 10px;
+            padding: 0px;
+        }
+    }
+    // exo tabs
+    .bonnenuit,
+    .fluxcontinu,
+    .impitoyable {
+        grid-area: 3/1/4/2;
+        table {
+            width: 320px;
+            height: auto;
+            margin: 10px;
+            padding: 0px;
+            th{
+                font-size: 30px;
             }
         }
     }
