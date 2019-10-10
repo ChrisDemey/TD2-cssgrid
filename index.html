@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>The Division 2 - Équipements</title>
 </head>
 
@@ -13,66 +13,67 @@
     <header>
         <img src="assets/img/Tctd2_logoblanc.png" />
     </header>
+    
     <nav>
-        <div class="marques" onclick="tabClick('.brandlist')">
+        <div class="marques navBtn">
             <p>MARQUES</p>
         </div>
-        <div class="exo" onclick="tabClick('.exolist')">
+        <div class="exo navBtn">
             <p>EXOTIQUES</p>
         </div>
-        <div class="gear" onclick="tabClick('.gearlist')">
+        <div class="gear navBtn">
             <p>SETS</p>
         </div>
     </nav>
 
-    <div class="brandlist">
+    <div class="brandlist tabs">
         <main>
             <table>
                 <tr>
                     <th colspan="2">MARQUES D'ÉQUIPPEMENTS</th>
                 </tr>
                 <tr>
-                    <td class="tacticalbtn">5.11 Tactical</td>
-                    <td>Murakami Industries</td>
+                    <td onclick="panelClick('.tacticaltab')">5.11 Tactical</td>
+                    <td onclick="panelClick('.murakamitab')">Murakami Industries</td>
                 </tr>
                 <tr>
-                    <td>Airaldi Holdings</td>
-                    <td>Overlord Armaments</td>
+                    <td onclick="panelClick('.airalditab')">Airaldi Holdings</td>
+                    <td onclick="panelClick('.overlordtab')">Overlord Armaments</td>
                 </tr>
                 <tr>
-                    <td>Alps Summit Armament</td>
-                    <td>Petrov Defense Group</td>
+                    <td onclick="panelClick('.summittab')">Alps Summit Armament</td>
+                    <td onclick="panelClick('.petrovtab')">Petrov Defense Group</td>
                 </tr>
                 <tr>
-                    <td>Badger Tuff</td>
-                    <td>Providence Defense</td>
+                    <td onclick="panelClick('.badgertab')">Badger Tuff</td>
+                    <td onclick="panelClick('.providencetab')">Providence Defense</td>
                 </tr>
                 <tr>
-                    <td>Česká Výroba s.r.o.</td>
-                    <td>Richter & Kaiser GmbH</td>
+                    <td onclick="panelClick('.ceskatab')">Česká Výroba s.r.o.</td>
+                    <td onclick="panelClick('.richtertab')">Richter & Kaiser GmbH</td>
                 </tr>
                 <tr>
-                    <td>China Light Industries Corporation</td>
-                    <td>Sokolov Concern</td>
+                    <td onclick="panelClick('.chinatab')">China Light Industries Corporation</td>
+                    <td onclick="panelClick('.sokolovtab')">Sokolov Concern</td>
                 </tr>
                 <tr>
-                    <td>Douglas & Harding</td>
-                    <td>Wyvern Wear</td>
+                    <td onclick="panelClick('.douglastab')">Douglas & Harding</td>
+                    <td onclick="panelClick('.wyverntab')">Wyvern Wear</td>
                 </tr>
                 <tr>
-                    <td>Fenris Group AB</td>
-                    <td>Yaahl Gear</td>
+                    <td onclick="panelClick('.fenristab')">Fenris Group AB</td>
+                    <td onclick="panelClick('.yaahltab')">Yaahl Gear</td>
                 </tr>
                 <tr>
-                    <td>Gila Guard</td>
+                    <td onclick="panelClick('.gilatab')">Gila Guard</td>
                 </tr>
                 <tr>
-                    <td>Golan Gear</td>
+                    <td onclick="panelClick('.golantab')">Golan Gear</td>
                 </tr>
             </table>
         </main>
     </div>
-    <div class="exolist">
+    <div class="exolist tabs">
         <main>
             <table>
                 <tr>
@@ -121,7 +122,7 @@
             </table>
         </main>
     </div>
-    <div class="gearlist">
+    <div class="gearlist tabs">
         <main>
             <table>
                 <tr>
@@ -150,13 +151,14 @@
     </div>
 
     <!--Marques d'équipements -->
-    <div class="tacticaltab">
+    <div class="tacticaltab itemTab">
         <!--511 tactical-->
         <table>
             <thead>
                 <tr>
                     <th>5.11 Tactical</th>
                 </tr>
+                <span class="close">&times;</span>
             </thead>
             <tbody>
                 <tr>
@@ -176,13 +178,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="airalditab">
+    <div class="airalditab itemTab">
         <!--airaldi holdings-->
         <table>
             <thead>
                 <tr>
                     <th>Airaldi Holdings</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -202,13 +207,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="summittab">
+    <div class="summittab itemTab">
         <!--airaldi holdings-->
         <table>
             <thead>
                 <tr>
                     <th>Alps Summit Armament</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -228,13 +236,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="badgertab">
+    <div class="badgertab itemTab">
         <!--badger tuff-->
         <table>
             <thead>
                 <tr>
                     <th>Badger Tuff</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -254,13 +265,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="ceskatab">
+    <div class="ceskatab itemTab">
         <!--ceska vyroba sro-->
         <table>
             <thead>
                 <tr>
                     <th>Česká Výroba s.r.o.</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -280,13 +294,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="chinatab">
+    <div class="chinatab itemTab">
         <!--china light industries corporation-->
         <table>
             <thead>
                 <tr>
                     <th>China Light Industries Corporation</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -306,13 +323,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="douglastab">
+    <div class="douglastab itemTab">
         <!--douglas & harding-->
         <table>
             <thead>
                 <tr>
                     <th>Douglas & Harding</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -332,13 +352,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="fenristab">
+    <div class="fenristab itemTab">
         <!--fenris group AB-->
         <table>
             <thead>
                 <tr>
                     <th>Fenris Group AB</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -358,13 +381,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="gilatab">
+    <div class="gilatab itemTab">
         <!--gila guard-->
         <table>
             <thead>
                 <tr>
                     <th>Gila Guard</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -384,13 +410,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="golantab">
+    <div class="golantab itemTab">
         <!--golan gear-->
         <table>
             <thead>
                 <tr>
                     <th>Golan Gear</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -410,13 +439,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="murakamitab">
+    <div class="murakamitab itemTab">
         <!--murakami industries-->
         <table>
             <thead>
                 <tr>
                     <th>Murakami Industries</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -436,13 +468,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="overlordtab">
+    <div class="overlordtab itemTab">
         <!--overlord armaments-->
         <table>
             <thead>
                 <tr>
                     <th>Overlord Armaments</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -462,13 +497,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="petrovtab">
+    <div class="petrovtab itemTab">
         <!--petrov defense group-->
         <table>
             <thead>
                 <tr>
                     <th>Petrov Defense Group</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -488,13 +526,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="providencetab">
+    <div class="providencetab itemTab">
         <!--providence defense-->
         <table>
             <thead>
                 <tr>
                     <th>Providence Defense</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -514,13 +555,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="richtertab">
+    <div class="richtertab itemTab">
         <!--richter & kaiser gmbh-->
         <table>
             <thead>
                 <tr>
                     <th>Richter & Kaiser GmbH</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -540,13 +584,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="sokolovtab">
+    <div class="sokolovtab itemTab">
         <!--sokolov concern-->
         <table>
             <thead>
                 <tr>
                     <th>Sokolov Concern</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -566,13 +613,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="wyverntab">
+    <div class="wyverntab itemTab">
         <!--wyvern wear-->
         <table>
             <thead>
                 <tr>
                     <th>Wyvern Wear</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -592,13 +642,16 @@
             </tfoot>
         </table>
     </div>
-    <div class="yaahltab">
+    <div class="yaahltab itemTab">
         <!--yaahl gear-->
         <table>
             <thead>
                 <tr>
                     <th>Yaahl Gear</th>
                 </tr>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </thead>
             <tbody>
                 <tr>
@@ -620,7 +673,7 @@
     </div>
 
     <!-- Exotiques -->
-    <div class="bonnenuit">
+    <div class="bonnenuit itemTab">
         <!--bonne nuit / berceuse-->
         <table>
             <thead>
@@ -669,7 +722,7 @@
             </tfoot>
         </table>
     </div>
-    <div class="fluxcontinu">
+    <div class="fluxcontinu itemTab">
         <!--flux continu-->
         <table>
             <thead>
@@ -723,7 +776,7 @@
             </tfoot>
         </table>
     </div>
-    <div class="impitoyable">
+    <div class="impitoyable itemTab">
         <!--flux continu-->
         <table>
             <thead>
@@ -773,7 +826,7 @@
             </tfoot>
         </table>
     </div>
-    <div class="liberte">
+    <div class="liberte itemTab">
         <!--flux continu-->
         <table>
             <thead>
@@ -823,7 +876,7 @@
             </tfoot>
         </table>
     </div>
-    <div class="nemesis">
+    <div class="nemesis itemTab">
         <!--flux continu-->
         <table>
             <thead>
@@ -873,7 +926,7 @@
             </tfoot>
         </table>
     </div>
-    <div class="pestilence">
+    <div class="pestilence itemTab">
         <!--flux continu-->
         <table>
             <thead>
@@ -925,7 +978,7 @@
     </div>
 
     <!-- Gearsets -->
-    <div class="hardwired">
+    <div class="hardwired itemTab">
         <!--Hard Wired-->
         <table>
             <thead>
@@ -973,7 +1026,7 @@
             </tbody>
         </table>
     </div>
-    <div class="patriot">
+    <div class="patriot itemTab">
         <!--True Patriot-->
         <table>
             <thead>
@@ -1024,7 +1077,7 @@
             </tbody>
         </table>
     </div>
-    <div class="ongoing">
+    <div class="ongoing itemTab">
         <!--Ongoing Directive-->
         <table>
             <thead>
@@ -1070,7 +1123,7 @@
             </tbody>
         </table>
     </div>
-    <div class="aces">
+    <div class="aces itemTab">
         <!--Aces and Eights-->
         <table>
             <thead>
@@ -1122,7 +1175,7 @@
             </tbody>
         </table>
     </div>
-    <div class="nego">
+    <div class="nego itemTab">
         <!--Negotiator's Dilemma-->
         <table>
             <thead>
@@ -1171,7 +1224,7 @@
             </tbody>
         </table>
     </div>
-    <div class="spear">
+    <div class="spear itemTab">
         <!--Tip of the Spear-->
         <table>
             <thead>
@@ -1216,6 +1269,7 @@
             </tbody>
         </table>
     </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 

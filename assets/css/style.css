@@ -15,7 +15,6 @@ body {
       grid-template-columns: 35% 65%;
   -ms-grid-rows: 100px 1fr 35px;
       grid-template-rows: 100px 1fr 35px;
-  /* 1fr = la fraction restante */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -30,7 +29,6 @@ header {
   -ms-grid-column-span: 2;
   grid-area: 1/1/2/3;
   padding-top: 10px;
-  /*Empecher le header de bouger*/
   width: 100%;
 }
 
@@ -53,9 +51,7 @@ nav {
   margin-left: 20px;
 }
 
-nav .marques,
-nav .exo,
-nav .gear {
+nav .navBtn {
   font-size: 45px;
   height: 16vh;
   text-align: start;
@@ -504,6 +500,19 @@ nav .gear:hover {
 .yaahltab table tfoot span {
   color: #ffa600;
   font-weight: bold;
+}
+
+.close {
+  float: left;
+  position: absolute;
+  margin-left: 115px;
+  font-size: 3em;
+  color: white;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: #ffa600;
 }
 
 .bonnenuit,
